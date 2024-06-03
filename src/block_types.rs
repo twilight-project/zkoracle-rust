@@ -62,7 +62,7 @@ impl BlockRaw {
             "{}/cosmos/base/tendermint/v1beta1/blocks/latest",
             *NYKS_BLOCK_SUBSCRIBER_URL
         );
-        println!("url :{:?}", url);
+        // println!("url :{:?}", url);
         match request_url(&url) {
             Ok(block_data) => {
                 let mut block = BlockRaw::decode(block_data).unwrap();
