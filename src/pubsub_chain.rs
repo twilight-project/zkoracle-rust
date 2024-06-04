@@ -9,7 +9,7 @@ lazy_static! {
         ThreadPool::new(1, String::from("BLOCK_SERIALIZER_THREADPOOL Threadpool"))
     ));
     pub static ref NYKS_BLOCK_SUBSCRIBER_URL: String = std::env::var("NYKS_BLOCK_SUBSCRIBER_URL")
-    .unwrap_or("http://147.182.235.183:1317/".to_string());
+    .unwrap_or("http://localhost:1317/".to_string());
 }
 use crate::{block_types::Block, BlockRaw, ThreadPool};
 
