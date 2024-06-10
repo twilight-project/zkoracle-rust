@@ -60,6 +60,7 @@ pub fn subscribe_block(
                                     block_height,
                                     arg
                                 );
+                                thread::sleep(time::Duration::from_millis(1000));
                                 if attempt == 3 {
                                     println!("block fetching at block height :{} failed after 3 attempts, fethcing next block", block_height);
                                     block_height += 1;
